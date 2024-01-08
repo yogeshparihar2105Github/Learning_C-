@@ -11,6 +11,11 @@ int main()
     strcat(s1,s2);
     cout<<"From strcat Method : "<<s1<<endl;
 
+    for(int i=4; i<10; i++)
+    {
+        s1[i] = NULL;
+    }
+
     strncat(s1,s2, 3);
     cout<<"From strncat Method : "<<s1;
 
