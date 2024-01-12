@@ -5,18 +5,13 @@ using namespace std;
 
 int main()
 {
-    char s1[20] = "Good";
-    char s2[10] = "";
+    string s = "Hello";
 
-    strcpy(s2, s1);
+    char carr[10];
 
-    cout<<"The content of s1 copied to s2 : "<<s2<<endl;
+    s.copy(carr, 3);
+    carr[3] = '\0';
 
-    char s3[10] = "";
-
-    strcpy(s1, s3);
-    cout<<"The content of s3 copied to s1 : "<<s1<<endl;
-
-    cout<<"strcpy will override the existing thing in the source with the destination";
+    cout<<carr<<endl;
     return 0;
 }
