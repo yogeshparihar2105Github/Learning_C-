@@ -1,34 +1,52 @@
-#include<iostream>
-#include<cstring>
-
+# include<iostream>
 using namespace std;
-
-template<class T>
+    
+//This stack class can store any datatype(int, float, char, string, bool)
+template<class t>
 class stack
 {
-    private:
-        T s[10];
-        int top;
-    public:
-        void push(T x);
-        T pop();
-
+private:
+	t *stk;
+    	int top;
+    	int size;
+public:
+	stack(int z)
+    	{
+        	size=sz;
+		top=-1;
+		stk=new int[size];
+       	}
+	void push(t x);
+	t pop();
 };
-
-template<class T>
-void stack<T>::push(T x)
+template<class t>
+void stack<t>::push(t x)
 {
-    cout<<"Pushed";
+	if(top==size-1)
+		cout<<"stack is full";
+	else
+	{
+		top++;
+	      	stk[top]=x;
+	}
 }
-
+template<class t>
+t stack<t>::pop()
+{
+	t x=0;
+	if(top==-1)
+		cout<<"stack is empty"<<endl;
+	else
+	{
+		x=stk[top];
+		top--;
+	}
+	return x;
+}
 int main()
 {
-    stack<int> s;
-
-    s.push(20);
-
-
-    return 0;
+	stack<int> s(10);
+	s.push(10);
+	s.push(23);
+	s.push(33);
 }
-
-
