@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
 	ifstream ifs;
-	ifs.open("my.txt");
+	ifs.open("my.text");
 	if(ifs.is_open()) 
 	cout<<"file is opened"<<endl;
 	string name;
@@ -13,7 +13,7 @@ int main()
 	string branch;
 	ifs>>name>>roll>>branch;
 	ifs.close();
-	cout<<"name"<<name<<endl;
-	cout<<"roll"<<roll<<endl;
-	cout<<"branch"<<branch<<endl;
+	cout<<"name "<<name<<endl;
+	cout<<"roll "<<roll<<endl;
+	cout<<"branch "<<branch<<endl;
 }
