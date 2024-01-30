@@ -28,6 +28,18 @@ int main()
         cout<<"Hmm... Is the number you guessed bigger than "<<n<<endl;
         cout<<"Enter 1 if true else 0"<<endl;
         cin>>isBigger;
+
+        if(isBigger)
+        {
+            n = Guess(n,100);
+            //go to line 17;
+
+        }
+        else
+        {
+            n = Guess(0,n);
+            //go to line 17;
+        }
     }
     return 0;
 }
