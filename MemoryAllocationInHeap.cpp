@@ -26,6 +26,7 @@ int main()
     p1->length = 5;
 
     //If you want to do the above in c++
+    //you can do this way
     struct Rectangle *p2;
     p2 = new Rectangle;
     p2->breadth = 10;
