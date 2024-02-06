@@ -3,18 +3,18 @@
 using namespace std;
 
 
-int ExpoSlow(int m, int n)
+int PowerSlow(int m, int n)
 {
     if(n == 0)
     {
         return 1;
     }
     else{
-        return ExpoSlow(m, n-1) * m;
+        return PowerSlow(m, n-1) * m;
     }
 }
 
-int ExpoFast(int m, int n)
+int PowerFast(int m, int n)
 {
     if(n == 0)
     {
@@ -22,16 +22,16 @@ int ExpoFast(int m, int n)
     }
     else if(n % 2 == 0)
     {
-        return ExpoFast(m*m,n/2);
+        return PowerFast(m*m,n/2);
     }
     else
     {
-        return m * ExpoFast(m*m,(n-1)/2);
+        return m * PowerFast(m*m,(n-1)/2);
     }
 }
 
 int main()
 {
-    cout<<ExpoFast(2,10);
+    cout<<PowerFast(2,10);
     return 0;
 }
