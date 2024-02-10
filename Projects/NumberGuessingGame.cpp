@@ -13,32 +13,37 @@ int main()
 {
     bool isCorrectGuess = false;
     int n = Guess(0,100);
+    int ub = 100;
+    int lb = 0;
     cout<<"Guess A number between 0 and 100"<<endl;
-    cout<<"Is the number you guessed : "<<n<<endl;
-    cout<<"Enter 1 if true else 0"<<endl;
-    cin>>isCorrectGuess;
     
-    if(isCorrectGuess)
+    while(true)
     {
-        cout<<"Hurray, I won!";
-    }
-    else
-    {
-        bool isBigger = false;
-        cout<<"Hmm... Is the number you guessed bigger than "<<n<<endl;
+        cout<<"Is the number you guessed : "<<n<<endl;
         cout<<"Enter 1 if true else 0"<<endl;
-        cin>>isBigger;
-
-        if(isBigger)
+        cin>>isCorrectGuess;
+        
+        if(isCorrectGuess)
         {
-            n = Guess(n,100);
-            //go to line 17;
-
+            cout<<"Hurray, You Guessed You Won!";
+            return 0;
         }
         else
         {
-            n = Guess(0,n);
-            //go to line 17;
+            bool isBigger = false;
+            cout<<"Hmm... Is the number you guessed bigger than "<<n<<endl;
+            cout<<"Enter 1 if true else 0"<<endl;
+            cin>>isBigger;
+
+            if(isBigger)
+            {
+                lb = n; 
+            }
+            else
+            {
+                ub = n;
+            }
+            n = Guess(lb,ub);
         }
     }
     return 0;
