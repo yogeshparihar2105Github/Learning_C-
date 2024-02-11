@@ -15,11 +15,12 @@ int main()
     int n = Guess(0,100);
     int ub = 100;
     int lb = 0;
-    cout<<"Guess A number between 0 and 100"<<endl;
+    cout<<"Guess A number between 0 and 100"<<endl<<endl;
     
     while(true)
     {
         cout<<"Is the number you guessed : "<<n<<endl;
+
         cout<<"Enter 1 if true else 0"<<endl;
         cin>>isCorrectGuess;
         
