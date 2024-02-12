@@ -1,3 +1,4 @@
+//This is a Game in which you guess a number and program has to find what is it. 
 #include<iostream>
 #include<cstring>
 #include <cstdlib>
