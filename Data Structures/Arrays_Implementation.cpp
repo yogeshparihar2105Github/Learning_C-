@@ -1,5 +1,6 @@
 #include<iostream>
 
+//This is how the array is implemented
 struct Arrays_Implementation
 {
     int *A;
