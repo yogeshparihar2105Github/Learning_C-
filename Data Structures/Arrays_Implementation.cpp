@@ -3,6 +3,7 @@
 using namespace std;
 
 //This is how the array is implemented
+//Fill it with all the method that should be inside an array
 struct Arrays_Implementation
 {
     int *A;
